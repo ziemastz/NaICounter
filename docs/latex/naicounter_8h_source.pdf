@@ -1,0 +1,132 @@
+\hypertarget{naicounter_8h_source}{}\doxysection{naicounter.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef NAICOUNTER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define NAICOUNTER\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QMutex>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}dpcdecl.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}depp.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}dmgr.h"{}}}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_na_i_counter}{NaICounter}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \textcolor{keyword}{enum} ADDRESSREG \{}
+\DoxyCodeLine{13         ENABLE\_PORT\_A = 0x01,}
+\DoxyCodeLine{14         RESET\_PORT\_A  = 0x02,}
+\DoxyCodeLine{15         ENABLE\_PORT\_B = 0x03,}
+\DoxyCodeLine{16         RESET\_PORT\_B  = 0x04,}
+\DoxyCodeLine{17         ENABLE\_PORT\_C = 0x05,}
+\DoxyCodeLine{18         RESET\_PORT\_C  = 0x06,}
+\DoxyCodeLine{19         ENABLE\_PORT\_D = 0x07,}
+\DoxyCodeLine{20         RESET\_PORT\_D  = 0x08,}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         DEAT\_TIME\_A0  = 0xA0,}
+\DoxyCodeLine{23         DEAT\_TIME\_A1  = 0xA1,}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25         DEAT\_TIME\_B0  = 0xB0,}
+\DoxyCodeLine{26         DEAT\_TIME\_B1  = 0xB1,}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         DEAT\_TIME\_C0  = 0xC0,}
+\DoxyCodeLine{29         DEAT\_TIME\_C1  = 0xC1,}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         DEAT\_TIME\_D0  = 0xD0,}
+\DoxyCodeLine{32         DEAT\_TIME\_D1  = 0xD1,}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         COUNTS\_A3     = 0x11,}
+\DoxyCodeLine{35         COUNTS\_A2     = 0x12,}
+\DoxyCodeLine{36         COUNTS\_A1     = 0x13,}
+\DoxyCodeLine{37         COUNTS\_A0     = 0x14,}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         LIVE\_TIME\_A3  = 0x15,}
+\DoxyCodeLine{40         LIVE\_TIME\_A2  = 0x16,}
+\DoxyCodeLine{41         LIVE\_TIME\_A1  = 0x17,}
+\DoxyCodeLine{42         LIVE\_TIME\_A0  = 0x18,}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         REAL\_TIME\_A3  = 0x19,}
+\DoxyCodeLine{45         REAL\_TIME\_A2  = 0x1A,}
+\DoxyCodeLine{46         REAL\_TIME\_A1  = 0x1B,}
+\DoxyCodeLine{47         REAL\_TIME\_A0  = 0x1C,}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         COUNTS\_B3     = 0x21,}
+\DoxyCodeLine{50         COUNTS\_B2     = 0x22,}
+\DoxyCodeLine{51         COUNTS\_B1     = 0x23,}
+\DoxyCodeLine{52         COUNTS\_B0     = 0x24,}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         LIVE\_TIME\_B3  = 0x25,}
+\DoxyCodeLine{55         LIVE\_TIME\_B2  = 0x26,}
+\DoxyCodeLine{56         LIVE\_TIME\_B1  = 0x27,}
+\DoxyCodeLine{57         LIVE\_TIME\_B0  = 0x28,}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59         REAL\_TIME\_B3  = 0x29,}
+\DoxyCodeLine{60         REAL\_TIME\_B2  = 0x2A,}
+\DoxyCodeLine{61         REAL\_TIME\_B1  = 0x2B,}
+\DoxyCodeLine{62         REAL\_TIME\_B0  = 0x2C,}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         COUNTS\_C3     = 0x31,}
+\DoxyCodeLine{65         COUNTS\_C2     = 0x32,}
+\DoxyCodeLine{66         COUNTS\_C1     = 0x33,}
+\DoxyCodeLine{67         COUNTS\_C0     = 0x34,}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         LIVE\_TIME\_C3  = 0x35,}
+\DoxyCodeLine{70         LIVE\_TIME\_C2  = 0x36,}
+\DoxyCodeLine{71         LIVE\_TIME\_C1  = 0x37,}
+\DoxyCodeLine{72         LIVE\_TIME\_C0  = 0x38,}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         REAL\_TIME\_C3  = 0x39,}
+\DoxyCodeLine{75         REAL\_TIME\_C2  = 0x3A,}
+\DoxyCodeLine{76         REAL\_TIME\_C1  = 0x3B,}
+\DoxyCodeLine{77         REAL\_TIME\_C0  = 0x3C,}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         COUNTS\_D3     = 0x41,}
+\DoxyCodeLine{80         COUNTS\_D2     = 0x42,}
+\DoxyCodeLine{81         COUNTS\_D1     = 0x43,}
+\DoxyCodeLine{82         COUNTS\_D0     = 0x44,}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84         LIVE\_TIME\_D3  = 0x45,}
+\DoxyCodeLine{85         LIVE\_TIME\_D2  = 0x46,}
+\DoxyCodeLine{86         LIVE\_TIME\_D1  = 0x47,}
+\DoxyCodeLine{87         LIVE\_TIME\_D0  = 0x48,}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89         REAL\_TIME\_D3  = 0x49,}
+\DoxyCodeLine{90         REAL\_TIME\_D2  = 0x4A,}
+\DoxyCodeLine{91         REAL\_TIME\_D1  = 0x4B,}
+\DoxyCodeLine{92         REAL\_TIME\_D0  = 0x4C,}
+\DoxyCodeLine{93     \};}
+\DoxyCodeLine{94     \textcolor{keyword}{enum} PORT \{}
+\DoxyCodeLine{95         PORT\_A = 0,}
+\DoxyCodeLine{96         PORT\_B = 1,}
+\DoxyCodeLine{97         PORT\_C = 2,}
+\DoxyCodeLine{98         PORT\_D = 3}
+\DoxyCodeLine{99     \};}
+\DoxyCodeLine{100     \mbox{\hyperlink{class_na_i_counter}{NaICounter}}();}
+\DoxyCodeLine{101     \textcolor{keywordtype}{void} setDeviceName(\textcolor{keyword}{const} std::string \&deviceName);}
+\DoxyCodeLine{102     \textcolor{keywordtype}{bool} connect();}
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} disconnect();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{bool} setEnable(\textcolor{keyword}{const} PORT \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \&enable);}
+\DoxyCodeLine{106     \textcolor{keywordtype}{int} isEnable(\textcolor{keyword}{const} PORT \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{107     \textcolor{keywordtype}{bool} setReset(\textcolor{keyword}{const} PORT \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \&reset);}
+\DoxyCodeLine{108     \textcolor{keywordtype}{int} isReset(\textcolor{keyword}{const} PORT \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{109     \textcolor{keywordtype}{bool} setDeadTime(\textcolor{keyword}{const} PORT \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \&value);}
+\DoxyCodeLine{110     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} deadTime(\textcolor{keyword}{const} PORT \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getCounts(PORT \textcolor{keywordtype}{id});}
+\DoxyCodeLine{113     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getLiveTime(PORT \textcolor{keywordtype}{id});}
+\DoxyCodeLine{114     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getRealTime(PORT \textcolor{keywordtype}{id});}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     std::string lastError();}
+\DoxyCodeLine{117 \textcolor{keyword}{private}:}
+\DoxyCodeLine{118     QMutex mutex;}
+\DoxyCodeLine{119     std::string \_deviceName;}
+\DoxyCodeLine{120     std::string \_lastError;}
+\DoxyCodeLine{121     HIF hif;}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     \textcolor{keywordtype}{bool} putReg(ADDRESSREG addrReg, BYTE dReg);}
+\DoxyCodeLine{124     \textcolor{keywordtype}{bool} getReg(ADDRESSREG addrReg, BYTE *dReg);}
+\DoxyCodeLine{125 \};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NAICOUNTER\_H}}
+
+\end{DoxyCode}

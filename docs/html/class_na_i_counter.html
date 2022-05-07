@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NaICounter: Dokumentacja klasy NaICounter</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NaICounter<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_na_i_counter.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Typy publiczne</a> &#124;
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="class_na_i_counter-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy NaICounter</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Biblioteka <a class="el" href="class_na_i_counter.html" title="Biblioteka NaICounter umożliwia komunikacje z FPGA.">NaICounter</a> umożliwia komunikacje z FPGA.  
+ <a href="class_na_i_counter.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="naicounter_8h_source.html">naicounter.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Typy publiczne</h2></td></tr>
+<tr class="memitem:a6b55b0e0d6902dfce9dc9d590c1e6c6c"><td class="memItemLeft" align="right" valign="top"><a id="a6b55b0e0d6902dfce9dc9d590c1e6c6c" name="a6b55b0e0d6902dfce9dc9d590c1e6c6c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ADDRESSREG</b> { <br />
+&#160;&#160;<b>ENABLE_PORT_A</b> = 0x01
+, <b>RESET_PORT_A</b> = 0x02
+, <b>ENABLE_PORT_B</b> = 0x03
+, <b>RESET_PORT_B</b> = 0x04
+, <br />
+&#160;&#160;<b>ENABLE_PORT_C</b> = 0x05
+, <b>RESET_PORT_C</b> = 0x06
+, <b>ENABLE_PORT_D</b> = 0x07
+, <b>RESET_PORT_D</b> = 0x08
+, <br />
+&#160;&#160;<b>DEAT_TIME_A0</b> = 0xA0
+, <b>DEAT_TIME_A1</b> = 0xA1
+, <b>DEAT_TIME_B0</b> = 0xB0
+, <b>DEAT_TIME_B1</b> = 0xB1
+, <br />
+&#160;&#160;<b>DEAT_TIME_C0</b> = 0xC0
+, <b>DEAT_TIME_C1</b> = 0xC1
+, <b>DEAT_TIME_D0</b> = 0xD0
+, <b>DEAT_TIME_D1</b> = 0xD1
+, <br />
+&#160;&#160;<b>COUNTS_A3</b> = 0x11
+, <b>COUNTS_A2</b> = 0x12
+, <b>COUNTS_A1</b> = 0x13
+, <b>COUNTS_A0</b> = 0x14
+, <br />
+&#160;&#160;<b>LIVE_TIME_A3</b> = 0x15
+, <b>LIVE_TIME_A2</b> = 0x16
+, <b>LIVE_TIME_A1</b> = 0x17
+, <b>LIVE_TIME_A0</b> = 0x18
+, <br />
+&#160;&#160;<b>REAL_TIME_A3</b> = 0x19
+, <b>REAL_TIME_A2</b> = 0x1A
+, <b>REAL_TIME_A1</b> = 0x1B
+, <b>REAL_TIME_A0</b> = 0x1C
+, <br />
+&#160;&#160;<b>COUNTS_B3</b> = 0x21
+, <b>COUNTS_B2</b> = 0x22
+, <b>COUNTS_B1</b> = 0x23
+, <b>COUNTS_B0</b> = 0x24
+, <br />
+&#160;&#160;<b>LIVE_TIME_B3</b> = 0x25
+, <b>LIVE_TIME_B2</b> = 0x26
+, <b>LIVE_TIME_B1</b> = 0x27
+, <b>LIVE_TIME_B0</b> = 0x28
+, <br />
+&#160;&#160;<b>REAL_TIME_B3</b> = 0x29
+, <b>REAL_TIME_B2</b> = 0x2A
+, <b>REAL_TIME_B1</b> = 0x2B
+, <b>REAL_TIME_B0</b> = 0x2C
+, <br />
+&#160;&#160;<b>COUNTS_C3</b> = 0x31
+, <b>COUNTS_C2</b> = 0x32
+, <b>COUNTS_C1</b> = 0x33
+, <b>COUNTS_C0</b> = 0x34
+, <br />
+&#160;&#160;<b>LIVE_TIME_C3</b> = 0x35
+, <b>LIVE_TIME_C2</b> = 0x36
+, <b>LIVE_TIME_C1</b> = 0x37
+, <b>LIVE_TIME_C0</b> = 0x38
+, <br />
+&#160;&#160;<b>REAL_TIME_C3</b> = 0x39
+, <b>REAL_TIME_C2</b> = 0x3A
+, <b>REAL_TIME_C1</b> = 0x3B
+, <b>REAL_TIME_C0</b> = 0x3C
+, <br />
+&#160;&#160;<b>COUNTS_D3</b> = 0x41
+, <b>COUNTS_D2</b> = 0x42
+, <b>COUNTS_D1</b> = 0x43
+, <b>COUNTS_D0</b> = 0x44
+, <br />
+&#160;&#160;<b>LIVE_TIME_D3</b> = 0x45
+, <b>LIVE_TIME_D2</b> = 0x46
+, <b>LIVE_TIME_D1</b> = 0x47
+, <b>LIVE_TIME_D0</b> = 0x48
+, <br />
+&#160;&#160;<b>REAL_TIME_D3</b> = 0x49
+, <b>REAL_TIME_D2</b> = 0x4A
+, <b>REAL_TIME_D1</b> = 0x4B
+, <b>REAL_TIME_D0</b> = 0x4C
+<br />
+ }</td></tr>
+<tr class="separator:a6b55b0e0d6902dfce9dc9d590c1e6c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50690b0098ca5ab34037f2d053ac418d"><td class="memItemLeft" align="right" valign="top"><a id="a50690b0098ca5ab34037f2d053ac418d" name="a50690b0098ca5ab34037f2d053ac418d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>PORT</b> { <b>PORT_A</b> = 0
+, <b>PORT_B</b> = 1
+, <b>PORT_C</b> = 2
+, <b>PORT_D</b> = 3
+ }</td></tr>
+<tr class="separator:a50690b0098ca5ab34037f2d053ac418d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:adfc495a1a2071c96c38890c2738fa081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_na_i_counter.html#adfc495a1a2071c96c38890c2738fa081">setDeviceName</a> (const std::string &amp;deviceName)</td></tr>
+<tr class="memdesc:adfc495a1a2071c96c38890c2738fa081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja służoca do ustawiania nazwy urządzenia z którym będzie się komunikowało.  <a href="class_na_i_counter.html#adfc495a1a2071c96c38890c2738fa081">Więcej...</a><br /></td></tr>
+<tr class="separator:adfc495a1a2071c96c38890c2738fa081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7038d0e109f6d013f9630776c41cce65"><td class="memItemLeft" align="right" valign="top"><a id="a7038d0e109f6d013f9630776c41cce65" name="a7038d0e109f6d013f9630776c41cce65"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>connect</b> ()</td></tr>
+<tr class="separator:a7038d0e109f6d013f9630776c41cce65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89d1bdd4adfd66d677fcdd1fdeac63b"><td class="memItemLeft" align="right" valign="top"><a id="ac89d1bdd4adfd66d677fcdd1fdeac63b" name="ac89d1bdd4adfd66d677fcdd1fdeac63b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> ()</td></tr>
+<tr class="separator:ac89d1bdd4adfd66d677fcdd1fdeac63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37bd71a23b9ecc4a3aac9e15b2e18da6"><td class="memItemLeft" align="right" valign="top"><a id="a37bd71a23b9ecc4a3aac9e15b2e18da6" name="a37bd71a23b9ecc4a3aac9e15b2e18da6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>setEnable</b> (const PORT &amp;id, const bool &amp;enable)</td></tr>
+<tr class="separator:a37bd71a23b9ecc4a3aac9e15b2e18da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c0e7c4506faa81e6f8244ffbd25864"><td class="memItemLeft" align="right" valign="top"><a id="a13c0e7c4506faa81e6f8244ffbd25864" name="a13c0e7c4506faa81e6f8244ffbd25864"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>isEnable</b> (const PORT &amp;id)</td></tr>
+<tr class="separator:a13c0e7c4506faa81e6f8244ffbd25864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbca337bfc85a70bfe9ea4409d4d3538"><td class="memItemLeft" align="right" valign="top"><a id="abbca337bfc85a70bfe9ea4409d4d3538" name="abbca337bfc85a70bfe9ea4409d4d3538"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>setReset</b> (const PORT &amp;id, const bool &amp;reset)</td></tr>
+<tr class="separator:abbca337bfc85a70bfe9ea4409d4d3538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951cf427caa133118a23992eff1f7286"><td class="memItemLeft" align="right" valign="top"><a id="a951cf427caa133118a23992eff1f7286" name="a951cf427caa133118a23992eff1f7286"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>isReset</b> (const PORT &amp;id)</td></tr>
+<tr class="separator:a951cf427caa133118a23992eff1f7286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e25d2a787d8e619878cfa3304a92c2f"><td class="memItemLeft" align="right" valign="top"><a id="a6e25d2a787d8e619878cfa3304a92c2f" name="a6e25d2a787d8e619878cfa3304a92c2f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>setDeadTime</b> (const PORT &amp;id, const unsigned short &amp;value)</td></tr>
+<tr class="separator:a6e25d2a787d8e619878cfa3304a92c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af861db98aa88d90b67225b7671b137b2"><td class="memItemLeft" align="right" valign="top"><a id="af861db98aa88d90b67225b7671b137b2" name="af861db98aa88d90b67225b7671b137b2"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>deadTime</b> (const PORT &amp;id)</td></tr>
+<tr class="separator:af861db98aa88d90b67225b7671b137b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1009fae199cf1d48f85efb7385cd606d"><td class="memItemLeft" align="right" valign="top"><a id="a1009fae199cf1d48f85efb7385cd606d" name="a1009fae199cf1d48f85efb7385cd606d"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getCounts</b> (PORT id)</td></tr>
+<tr class="separator:a1009fae199cf1d48f85efb7385cd606d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c0323d4eaa689c218b6a388d95ecf7e"><td class="memItemLeft" align="right" valign="top"><a id="a3c0323d4eaa689c218b6a388d95ecf7e" name="a3c0323d4eaa689c218b6a388d95ecf7e"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getLiveTime</b> (PORT id)</td></tr>
+<tr class="separator:a3c0323d4eaa689c218b6a388d95ecf7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae18f857a87f127fb0f92399c1316fc"><td class="memItemLeft" align="right" valign="top"><a id="a0ae18f857a87f127fb0f92399c1316fc" name="a0ae18f857a87f127fb0f92399c1316fc"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getRealTime</b> (PORT id)</td></tr>
+<tr class="separator:a0ae18f857a87f127fb0f92399c1316fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18ae7413b0a631db3bd3ab7657bc4d3"><td class="memItemLeft" align="right" valign="top"><a id="aa18ae7413b0a631db3bd3ab7657bc4d3" name="aa18ae7413b0a631db3bd3ab7657bc4d3"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>lastError</b> ()</td></tr>
+<tr class="separator:aa18ae7413b0a631db3bd3ab7657bc4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p >Biblioteka <a class="el" href="class_na_i_counter.html" title="Biblioteka NaICounter umożliwia komunikacje z FPGA.">NaICounter</a> umożliwia komunikacje z FPGA. </p>
+<p >zaimplemtowanym kodem </p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="adfc495a1a2071c96c38890c2738fa081" name="adfc495a1a2071c96c38890c2738fa081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc495a1a2071c96c38890c2738fa081">&#9670;&nbsp;</a></span>setDeviceName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NaICounter::setDeviceName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>deviceName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja służoca do ustawiania nazwy urządzenia z którym będzie się komunikowało. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceName</td><td>- nazwa urządzenia Adept </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="naicounter_8h_source.html">naicounter.h</a></li>
+<li>naicounter.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_na_i_counter.html">NaICounter</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+\hypertarget{class_na_i_counter}{}\doxysection{Dokumentacja klasy Na\+ICounter}
+\label{class_na_i_counter}\index{NaICounter@{NaICounter}}
+
+
+Biblioteka \mbox{\hyperlink{class_na_i_counter}{Na\+ICounter}} umożliwia komunikacje z FPGA.  
+
+
+
+
+{\ttfamily \#include $<$naicounter.\+h$>$}
+
+\doxysubsection*{Typy publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_na_i_counter_a6b55b0e0d6902dfce9dc9d590c1e6c6c}\label{class_na_i_counter_a6b55b0e0d6902dfce9dc9d590c1e6c6c}} 
+enum {\bfseries ADDRESSREG} \{ \newline
+{\bfseries ENABLE\+\_\+\+PORT\+\_\+A} = 0x01
+, {\bfseries RESET\+\_\+\+PORT\+\_\+A} = 0x02
+, {\bfseries ENABLE\+\_\+\+PORT\+\_\+B} = 0x03
+, {\bfseries RESET\+\_\+\+PORT\+\_\+B} = 0x04
+, \newline
+{\bfseries ENABLE\+\_\+\+PORT\+\_\+C} = 0x05
+, {\bfseries RESET\+\_\+\+PORT\+\_\+C} = 0x06
+, {\bfseries ENABLE\+\_\+\+PORT\+\_\+D} = 0x07
+, {\bfseries RESET\+\_\+\+PORT\+\_\+D} = 0x08
+, \newline
+{\bfseries DEAT\+\_\+\+TIME\+\_\+\+A0} = 0x\+A0
+, {\bfseries DEAT\+\_\+\+TIME\+\_\+\+A1} = 0x\+A1
+, {\bfseries DEAT\+\_\+\+TIME\+\_\+\+B0} = 0x\+B0
+, {\bfseries DEAT\+\_\+\+TIME\+\_\+\+B1} = 0x\+B1
+, \newline
+{\bfseries DEAT\+\_\+\+TIME\+\_\+\+C0} = 0x\+C0
+, {\bfseries DEAT\+\_\+\+TIME\+\_\+\+C1} = 0x\+C1
+, {\bfseries DEAT\+\_\+\+TIME\+\_\+\+D0} = 0x\+D0
+, {\bfseries DEAT\+\_\+\+TIME\+\_\+\+D1} = 0x\+D1
+, \newline
+{\bfseries COUNTS\+\_\+\+A3} = 0x11
+, {\bfseries COUNTS\+\_\+\+A2} = 0x12
+, {\bfseries COUNTS\+\_\+\+A1} = 0x13
+, {\bfseries COUNTS\+\_\+\+A0} = 0x14
+, \newline
+{\bfseries LIVE\+\_\+\+TIME\+\_\+\+A3} = 0x15
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+A2} = 0x16
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+A1} = 0x17
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+A0} = 0x18
+, \newline
+{\bfseries REAL\+\_\+\+TIME\+\_\+\+A3} = 0x19
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+A2} = 0x1A
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+A1} = 0x1B
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+A0} = 0x1C
+, \newline
+{\bfseries COUNTS\+\_\+\+B3} = 0x21
+, {\bfseries COUNTS\+\_\+\+B2} = 0x22
+, {\bfseries COUNTS\+\_\+\+B1} = 0x23
+, {\bfseries COUNTS\+\_\+\+B0} = 0x24
+, \newline
+{\bfseries LIVE\+\_\+\+TIME\+\_\+\+B3} = 0x25
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+B2} = 0x26
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+B1} = 0x27
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+B0} = 0x28
+, \newline
+{\bfseries REAL\+\_\+\+TIME\+\_\+\+B3} = 0x29
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+B2} = 0x2A
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+B1} = 0x2B
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+B0} = 0x2C
+, \newline
+{\bfseries COUNTS\+\_\+\+C3} = 0x31
+, {\bfseries COUNTS\+\_\+\+C2} = 0x32
+, {\bfseries COUNTS\+\_\+\+C1} = 0x33
+, {\bfseries COUNTS\+\_\+\+C0} = 0x34
+, \newline
+{\bfseries LIVE\+\_\+\+TIME\+\_\+\+C3} = 0x35
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+C2} = 0x36
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+C1} = 0x37
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+C0} = 0x38
+, \newline
+{\bfseries REAL\+\_\+\+TIME\+\_\+\+C3} = 0x39
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+C2} = 0x3A
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+C1} = 0x3B
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+C0} = 0x3C
+, \newline
+{\bfseries COUNTS\+\_\+\+D3} = 0x41
+, {\bfseries COUNTS\+\_\+\+D2} = 0x42
+, {\bfseries COUNTS\+\_\+\+D1} = 0x43
+, {\bfseries COUNTS\+\_\+\+D0} = 0x44
+, \newline
+{\bfseries LIVE\+\_\+\+TIME\+\_\+\+D3} = 0x45
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+D2} = 0x46
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+D1} = 0x47
+, {\bfseries LIVE\+\_\+\+TIME\+\_\+\+D0} = 0x48
+, \newline
+{\bfseries REAL\+\_\+\+TIME\+\_\+\+D3} = 0x49
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+D2} = 0x4A
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+D1} = 0x4B
+, {\bfseries REAL\+\_\+\+TIME\+\_\+\+D0} = 0x4C
+ \}
+\item 
+\mbox{\Hypertarget{class_na_i_counter_a50690b0098ca5ab34037f2d053ac418d}\label{class_na_i_counter_a50690b0098ca5ab34037f2d053ac418d}} 
+enum {\bfseries PORT} \{ {\bfseries PORT\+\_\+A} = 0
+, {\bfseries PORT\+\_\+B} = 1
+, {\bfseries PORT\+\_\+C} = 2
+, {\bfseries PORT\+\_\+D} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_na_i_counter_adfc495a1a2071c96c38890c2738fa081}{set\+Device\+Name}} (const std\+::string \&device\+Name)
+\begin{DoxyCompactList}\small\item\em Funkcja służoca do ustawiania nazwy urządzenia z którym będzie się komunikowało. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_na_i_counter_a7038d0e109f6d013f9630776c41cce65}\label{class_na_i_counter_a7038d0e109f6d013f9630776c41cce65}} 
+bool {\bfseries connect} ()
+\item 
+\mbox{\Hypertarget{class_na_i_counter_ac89d1bdd4adfd66d677fcdd1fdeac63b}\label{class_na_i_counter_ac89d1bdd4adfd66d677fcdd1fdeac63b}} 
+void {\bfseries disconnect} ()
+\item 
+\mbox{\Hypertarget{class_na_i_counter_a37bd71a23b9ecc4a3aac9e15b2e18da6}\label{class_na_i_counter_a37bd71a23b9ecc4a3aac9e15b2e18da6}} 
+bool {\bfseries set\+Enable} (const PORT \&id, const bool \&enable)
+\item 
+\mbox{\Hypertarget{class_na_i_counter_a13c0e7c4506faa81e6f8244ffbd25864}\label{class_na_i_counter_a13c0e7c4506faa81e6f8244ffbd25864}} 
+int {\bfseries is\+Enable} (const PORT \&id)
+\item 
+\mbox{\Hypertarget{class_na_i_counter_abbca337bfc85a70bfe9ea4409d4d3538}\label{class_na_i_counter_abbca337bfc85a70bfe9ea4409d4d3538}} 
+bool {\bfseries set\+Reset} (const PORT \&id, const bool \&reset)
+\item 
+\mbox{\Hypertarget{class_na_i_counter_a951cf427caa133118a23992eff1f7286}\label{class_na_i_counter_a951cf427caa133118a23992eff1f7286}} 
+int {\bfseries is\+Reset} (const PORT \&id)
+\item 
+\mbox{\Hypertarget{class_na_i_counter_a6e25d2a787d8e619878cfa3304a92c2f}\label{class_na_i_counter_a6e25d2a787d8e619878cfa3304a92c2f}} 
+bool {\bfseries set\+Dead\+Time} (const PORT \&id, const unsigned short \&value)
+\item 
+\mbox{\Hypertarget{class_na_i_counter_af861db98aa88d90b67225b7671b137b2}\label{class_na_i_counter_af861db98aa88d90b67225b7671b137b2}} 
+unsigned short {\bfseries dead\+Time} (const PORT \&id)
+\item 
+\mbox{\Hypertarget{class_na_i_counter_a1009fae199cf1d48f85efb7385cd606d}\label{class_na_i_counter_a1009fae199cf1d48f85efb7385cd606d}} 
+unsigned int {\bfseries get\+Counts} (PORT id)
+\item 
+\mbox{\Hypertarget{class_na_i_counter_a3c0323d4eaa689c218b6a388d95ecf7e}\label{class_na_i_counter_a3c0323d4eaa689c218b6a388d95ecf7e}} 
+unsigned int {\bfseries get\+Live\+Time} (PORT id)
+\item 
+\mbox{\Hypertarget{class_na_i_counter_a0ae18f857a87f127fb0f92399c1316fc}\label{class_na_i_counter_a0ae18f857a87f127fb0f92399c1316fc}} 
+unsigned int {\bfseries get\+Real\+Time} (PORT id)
+\item 
+\mbox{\Hypertarget{class_na_i_counter_aa18ae7413b0a631db3bd3ab7657bc4d3}\label{class_na_i_counter_aa18ae7413b0a631db3bd3ab7657bc4d3}} 
+std\+::string {\bfseries last\+Error} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Biblioteka \mbox{\hyperlink{class_na_i_counter}{Na\+ICounter}} umożliwia komunikacje z FPGA. 
+
+zaimplemtowanym kodem 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_na_i_counter_adfc495a1a2071c96c38890c2738fa081}\label{class_na_i_counter_adfc495a1a2071c96c38890c2738fa081}} 
+\index{NaICounter@{NaICounter}!setDeviceName@{setDeviceName}}
+\index{setDeviceName@{setDeviceName}!NaICounter@{NaICounter}}
+\doxysubsubsection{\texorpdfstring{setDeviceName()}{setDeviceName()}}
+{\footnotesize\ttfamily void Na\+ICounter\+::set\+Device\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{device\+Name }\end{DoxyParamCaption})}
+
+
+
+Funkcja służoca do ustawiania nazwy urządzenia z którym będzie się komunikowało. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em device\+Name} & -\/ nazwa urządzenia Adept \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+naicounter.\+h\item 
+naicounter.\+cpp\end{DoxyCompactItemize}
